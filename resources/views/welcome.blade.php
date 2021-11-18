@@ -87,13 +87,13 @@
 
                 <div class="links">
                     <a href="profile.html">Tugas 1</a>
-                    <a href="https://laracasts.com">Tugas 2</a>
-                    <a href="https://laravel-news.com">Tugas 3</a>
+                    <a href="profile_with_css.html">Tugas 2</a>
+                    <a href="signupform.html">Tugas 3</a>
                     <a href="praktikum1.html">Praktikum 1</a>
-                    <a href="https://nova.laravel.com">Tugas 4</a>
+                    <a href="tugasjquery">Tugas 4</a>
                     <a href="praktikum2">Praktikum 2</a>
-                    <a href="https://github.com/laravel/laravel">ETS</a>
-                    <a href="isiannama">Tugas PHP</a>
+                    <a href="formETS">ETS</a>
+                    <a href="tugasPHP">Tugas PHP</a>
                 </div>
             </div>
         </div>
