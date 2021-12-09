@@ -47,9 +47,9 @@ Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/tugas','TugasController@index');
 Route::get('/tugas/tambah','TugasController@tambah');
 Route::post('/tugas/store','TugasController@store');
-Route::get('/tugas/edit/{id}','TugasController@edit');
+Route::get('/tugas/edit/{ID}','TugasController@edit');
 Route::post('/tugas/update','TugasController@update');
-Route::get('/tugas/hapus/{id}','TugasController@hapus');
+Route::get('/tugas/hapus/{ID}','TugasController@hapus');
 
 //route CRUD absen
 Route::get('/absen','AbsenController@indexabsen');

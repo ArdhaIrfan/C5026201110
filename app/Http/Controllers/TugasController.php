@@ -29,20 +29,20 @@ class TugasController extends Controller
     {
         // insert data ke table tugas
         DB::table('tugas')->insert([
-            'idPegawai' => $request->idPegawai,
-            'tanggal' => $request->tanggal,
-            'namaTugas' => $request->namaTugas,
-            'status' => $request->status
+            'IDPegawai' => $request->IDPegawai,
+            'Tanggal' => $request->Tanggal,
+            'NamaTugas' => $request->NamaTugas,
+            'Status' => $request->Status
         ]);
         // alihkan halaman ke halaman tugas
         return redirect('/tugas');
     }
 
     // method untuk edit data tugas
-    public function edit($id)
+    public function edit($ID)
     {
         // mengambil data tugas berdasarkan id yang dipilih
-        $tugas = DB::table('tugas')->where('id', $id)->get();
+        $tugas = DB::table('tugas')->where('ID', $ID)->get();
         // passing data tugas yang didapat ke view edit.blade.php
         return view('tugas.edit', ['tugas' => $tugas]);
     }
@@ -51,21 +51,21 @@ class TugasController extends Controller
     public function update(Request $request)
     {
         // update data tugas
-        DB::table('tugas')->where('id', $request->id)->update([
-            'idPegawai' => $request->idPegawai,
-            'tanggal' => $request->tanggal,
-            'namaTugas' => $request->namaTugas,
-            'status' => $request->status
+        DB::table('tugas')->where('ID', $request->ID)->update([
+            'IDPegawai' => $request->IDPegawai,
+            'Tanggal' => $request->Tanggal,
+            'NamaTugas' => $request->NamaTugas,
+            'Status' => $request->Status
         ]);
         // alihkan halaman ke halaman tugas
         return redirect('/tugas');
     }
 
     // method untuk hapus data tugas
-    public function hapus($id)
+    public function hapus($ID)
     {
         // menghapus data tugas berdasarkan id yang dipilih
-        DB::table('tugas')->where('id', $id)->delete();
+        DB::table('tugas')->where('ID', $ID)->delete();
 
         // alihkan halaman ke halaman tugas
         return redirect('/tugas');

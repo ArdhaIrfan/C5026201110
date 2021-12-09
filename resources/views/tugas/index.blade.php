@@ -24,15 +24,15 @@
 		</tr>
 		@foreach($tugas as $p)
 		<tr>
-			<td>{{ $p->id }}</td>
-			<td>{{ $p->idPegawai }}</td>
-			<td>{{ $p->tanggal }}</td>
-			<td>{{ $p->namaTugas }}</td>
-            <td>{{ $p->status }}</td>
+			<td>{{ $p->ID }}</td>
+			<td>{{ $p->IDPegawai }}</td>
+			<td>{{ $p->Tanggal }}</td>
+			<td>{{ $p->NamaTugas }}</td>
+            <td>{{ $p->Status }}</td>
 			<td>
-				<a href="/tugas/edit/{{ $p->id }}">Edit</a>
+				<a href="/tugas/edit/{{ $p->ID }}">Edit</a>
 				|
-				<a href="/tugas/hapus/{{ $p->id }}">Hapus</a>
+				<a href="/tugas/hapus/{{ $p->ID }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

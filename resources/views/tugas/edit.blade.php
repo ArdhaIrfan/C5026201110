@@ -16,11 +16,11 @@
 	@foreach($tugas as $p)
 	<form action="/tugas/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->id }}"> <br/>
-		IDPegawai <input type="number" required="required" name="idPegawai" value="{{ $p->idPegawai }}"> <br/>
-		Tanggal <input type="datetime-local" required="required" name="tanggal" value="{{ $p->tanggal }}"> <br/>
-		NamaTugas <textarea required="required" name="namaTugas">{{ $p->namaTugas }}</textarea> <br/>
-		Status <input type="text" required="required" name="status" value="{{ $p->status }}"> <br/>
+		<input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
+		IDPegawai <input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}"> <br/>
+		Tanggal <input type="datetime-local" required="required" name="Tanggal" value="{{ $p->Tanggal }}"> <br/>
+		NamaTugas <textarea required="required" name="NamaTugas">{{ $p->NamaTugas }}</textarea> <br/>
+		Status <input type="text" required="required" name="Status" value="{{ $p->Status }}"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 	@endforeach

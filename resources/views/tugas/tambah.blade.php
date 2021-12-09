@@ -16,10 +16,10 @@
 	<form action="/tugas/store" method="post">
 		{{ csrf_field() }}
 		{{-- ID <input type="number" name="id" required="required"> <br/> --}}
-		IDPegawai <input type="number" name="idPegawai" required="required"> <br/>
-		Tanggal <input type="datetime-local" name="tanggal" required="required"> <br/>
-		NamaTugas <textarea name="namaTugas" required="required"></textarea> <br/>
-        Status <input type="text" name="status" required="required"> <br/>
+		IDPegawai <input type="number" name="IDPegawai" required="required"> <br/>
+		Tanggal <input type="datetime-local" name="Tanggal" required="required"> <br/>
+		NamaTugas <textarea name="namaTugas" required="Required"></textarea> <br/>
+        Status <input type="text" name="Status" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 
