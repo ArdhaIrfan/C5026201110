@@ -11,7 +11,8 @@
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $a->ID }}">
-        IDPegawai <select name="idpegawai" >
+        IDPegawai
+        <select name="idpegawai">
             @foreach($pegawai as $p)
              <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $a->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
             @endforeach

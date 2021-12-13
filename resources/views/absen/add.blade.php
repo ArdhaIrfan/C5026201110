@@ -1,21 +1,32 @@
-
-   @extends('layout.bahagia')
+@extends('layout.bahagia')
 
    @section('title', 'Menambah Absen')
    @section('judulhalaman', 'Menambah Data Absen')
 
    @section('konten')
+
+	<br/>
+
+    {{-- @section('cari')
+        <form action="/pegawai/cari" method="GET">
+            <input type="text" name="cari" style="width: 50%; margin-top: 3%" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
+            <input type="submit" class="btn btn-default" value="CARI">
+        </form>
+    @endsection --}}
+
+    {{-- <h5 style="margin-bottom: 2%"><a href="/pegawai/tambah"> + Tambah Pegawai Baru</a></h5> --}}
+
     <form action="/absen/store" method="post">
         {{ csrf_field() }}
-
-        IDPegawai <select name="idpegawai" >
-    @foreach($pegawai as $p)
-     <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
-    @endforeach
-</select>
+        IDPegawai
+    <select name="idpegawai" >
+        @foreach($pegawai as $p)
+        <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+        @endforeach
+    </select>
 <br>
         <div class="form-group">
-            <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
+            <label for="dtpickerdemo" class="control-label">Tanggal :</label>
             <div class='col-sm-4 input-group date ' id='dtpickerdemo'>
                 <input type='text' class="form-control" name="tanggal" required="required" />
                 <span class="input-group-addon">

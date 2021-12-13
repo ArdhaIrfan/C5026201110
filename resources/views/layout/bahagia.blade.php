@@ -26,6 +26,17 @@ body {
   font-size: 16px;
 }
 
+#table {
+    width: 90%;
+    /* margin: auto; */
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#headtable {
+    background:rgb(209, 209, 209);
+}
+
 /* Toggle Styles */
 
 #viewport {
@@ -102,19 +113,41 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.centertext {
+    text-align: center;
+}
+
+.title {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+}
+
+label {
+    font-weight: initial;
+}
+
+#footer {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #263238;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+}
+
     </style>
 
 </head>
 
 <body>
-    @section('header')
-<img class="center" src="https://media-exp1.licdn.com/dms/image/C5603AQEAdcFaR-tdpA/profile-displayphoto-shrink_800_800/0/1619919737115?e=1644451200&v=beta&t=m9hr5nRPfHtqZmpcIJQv6YKgyA5iMpEcG-MBFuRbisY" alt="Foto" width="100" height="100" style="border-radius: 50%">
-    <h2 style="text-align: center">Ardha Irfan Hakim<br></h2>
-    <h4 style="text-align: center">5026201110</h4>
-    @show
-
-    <h3>@yield('judulhalaman')</h3>
-
     <div id="viewport">
         <!-- Sidebar -->
         <div id="sidebar">
@@ -137,6 +170,11 @@ body {
                 <i class="zmdi zmdi-widgets"></i> Tugas
               </a>
             </li>
+            <li>
+                <a href="/mouse">
+                  <i class="zmdi zmdi-widgets"></i> Praktikum
+                </a>
+              </li>
             {{-- <li>
               <a href="#">
                 <i class="zmdi zmdi-calendar"></i> Events
@@ -159,31 +197,42 @@ body {
             </li> --}}
           </ul>
         </div>
+
         <!-- Content -->
         <div id="content">
           <nav class="navbar navbar-default">
             <div class="container-fluid">
-              <ul class="nav navbar-nav navbar-right">
+                <br>
+                @section('header')
+                <img class="center" src="https://media-exp1.licdn.com/dms/image/C5603AQEAdcFaR-tdpA/profile-displayphoto-shrink_800_800/0/1619919737115?e=1644451200&v=beta&t=m9hr5nRPfHtqZmpcIJQv6YKgyA5iMpEcG-MBFuRbisY" alt="Foto" width="80" height="80" style="border-radius: 50%">
+                    <h4 style="text-align: center">Ardha Irfan Hakim<br></h4>
+                    <h6 style="text-align: center">5026201110</h6>
+                    @show
+              {{-- <ul class="nav navbar-nav navbar-right">
                 <li>
                   <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
                   </a>
                 </li>
                 <li><a href="#">Test User</a></li>
-              </ul>
+              </ul> --}}
             </div>
           </nav>
-          <div class="container-fluid">
-            <h1>Tabel</h1>
-            @section('konten')
+            <div class="container-fluid" id="table">
+                <h3 class="centertext title">@yield('judulhalaman')</h3>
+                @section('cari')
 
-            @show
-          </div>
+                @show
+                @section('konten')
+
+                @show
+            </div>
         </div>
-      </div>
-
-    {{-- @section('konten')
-
-    @show --}}
+        <div id="footer">
+            <p>
+                Copyright Ardha Irfan Hakim &copy;. All rights reserved.
+            </p>
+        </div>
+    </div>
 
 </body>
 

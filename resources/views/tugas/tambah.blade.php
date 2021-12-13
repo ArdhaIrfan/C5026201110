@@ -1,27 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Tugas</h3>
+   @section('title', 'Tambah Tugas Baru')
+   @section('judulhalaman', 'Tambah Tugas Baru')
 
-	<a href="/tugas"> Kembali</a>
+   @section('konten')
 
 	<br/>
-	<br/>
 
-	<form action="/tugas/store" method="post">
+    <h5 style="margin-bottom: 2%"><a href="/tugas"> Kembali</a></h5>
+
+    <form action="/tugas/store" method="post">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <label for="IDPegawai">IDPegawai</label>
+            <input type="number" name="IDPegawai" required="required" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="Tanggal">Tanggal</label>
+            <input type="datetime-local" name="Tanggal" required="required" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="NamaTugas">NamaTugas</label>
+            <textarea name="NamaTugas" required="required" class="form-control"></textarea>
+            </div>
+        <div class="form-group">
+            <label for="Status">Status</label>
+            <input type="text" name="Status" required="required" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-default center">Simpan Data</button>
+    </form>
+
+	{{-- <form action="/tugas/store" method="post">
 		{{ csrf_field() }}
-		{{-- ID <input type="number" name="id" required="required"> <br/> --}}
 		IDPegawai <input type="number" name="IDPegawai" required="required"> <br/>
 		Tanggal <input type="datetime-local" name="Tanggal" required="required"> <br/>
-		NamaTugas <textarea name="namaTugas" required="Required"></textarea> <br/>
+		NamaTugas <textarea name="namaTugas" required="required"></textarea> <br/>
         Status <input type="text" name="Status" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
-	</form>
+	</form> --}}
 
-</body>
-</html>
+@endsection
