@@ -72,3 +72,13 @@ Route::post('/mouse/update','MouseController@update');
 Route::get('/mouse/hapus/{kodemouse}','MouseController@hapus');
 Route::get('/mouse/cari','MouseController@cari');
 Route::get('/mouse/view/{kodemouse}','MouseController@detail');
+
+//route CRUD KeranjangBelanja
+Route::get('/keranjangbelanja','KeranjangBelanjaController@index');
+Route::get('/keranjangbelanja/tambah','KeranjangBelanjaController@tambah');
+Route::post('/keranjangbelanja/store','KeranjangBelanjaController@store');
+Route::get('/keranjangbelanja/edit/{ID}','KeranjangBelanjaController@edit');
+Route::post('/keranjangbelanja/update','KeranjangBelanjaController@update');
+Route::get('/keranjangbelanja/hapus/{ID}','KeranjangBelanjaController@hapus');
+Route::get('/keranjangbelanja/cari','KeranjangBelanjaController@cari');
+Route::get('/keranjangbelanja/view/{ID}','KeranjangBelanjaController@detail');

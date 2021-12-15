@@ -174,7 +174,12 @@ label {
                 <a href="/mouse">
                   <i class="zmdi zmdi-widgets"></i> Praktikum
                 </a>
-              </li>
+            </li>
+            <li>
+                <a href="/keranjangbelanja">
+                  <i class="zmdi zmdi-widgets"></i> Keranjang Belanja (EAS)
+                </a>
+            </li>
             {{-- <li>
               <a href="#">
                 <i class="zmdi zmdi-calendar"></i> Events
